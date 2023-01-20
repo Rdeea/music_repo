@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;700;900&family=Raleway:wght@100;300;500;700&display=swap');
+:root{
+    --bodyBack: #090429;
+    --textColor: #ecf0f8;
+    --starColor: #f67034;
+    --selectionBack: #f7f6f9;
+}
+*{
+    margin: 5px;
+    padding: 5px;
+    box-sizing: border-box;
+    font-family:"Raleway" sans-serif;
+
+}
+body{
+    background: url(poze/font1.jpg);
+    min-height: 20vh;
+    display: grid;
+    place-items: center;
+
+}
+
+.container{
+    width: 10vw;
+    height: 20vh;
+    display: grid;
+    flex-direction: column-reverse;
+    justify-content: space-around;
+}
+.header {
+    width: 100%;
+    text-align: center;
+
+}
+
+.header h1{
+    font-size: 4em;
+    text-transform: uppercase;
+    color: var(--textColor);
+}
+
+.products{
+    width: 100%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+.product{
+    position: relative;
+    background-color: var(--selectionBack);
+    width: 300px;
+    height: 150%;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3) ;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+    border-radius: 10px;
+    transition: 0.3;
+}
+ .product:hover{
+    transform: translate(-15px);
+    box-shadow:0 5px 10px rgba(0,0,0,0.2) ;
+ }
+
+.image{
+    width: 80%;
+    height: 50%;
+    display: grid;
+    place-items: center;
+}
+
+.image img{
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.namePrice{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between ;
+}
+
+.namePrice h3{
+    font-size: 2em;
+    text-transform: capitalize;
+    color: var(--starColor);
+}
+
+.namePrice span{
+    font-size: 1.5em;
+    color: var(--starColor);
+
+}
+.product p{
+    font-size:18px;
+    line-height: 25px;
+}
+.stars svg{
+    font-size: 1.3em;
+    color: var(--starColor);}
+
+.buy{
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+.buy button{
+    padding: 10px 20px;
+    border-radius: 7px;
+    border: none;
+    background-color: var(--selectionBack);
+    font-size: 18px;
+    text-transform:capitalize ;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.buy button:hover{
+    transform: scale(1.1);
+}
