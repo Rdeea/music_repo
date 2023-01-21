@@ -1,84 +1,70 @@
+*{
+    box-sizing: border-box;
+    margin:0 ;
+    padding: 0;
+
+}
 body{
-background: #fff;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(149, 103, 22);
 }
-h1{
-    font-size: 54px;
-    text-transform: uppercase;
+.header {
+    width: 100%;
     text-align: center;
-    color: rgb(130, 99, 229);
-    font-family: "Odibee Sans" cursive;
-    margin-bottom: 0;
 }
 
-.carousel-wrapper{
-    height: 400px;
+.header h1{
+    font-size: 25px;
+    text-transform: uppercase;
+    color: black;
+}
+
+.slider{
     position: relative;
-    width: 800px;
-    display: block;
-    margin: 50px auto;
-    border: 2px solid black;
+    width: 60%;
+    overflow: hidden;
 }
-
-.carousel-item{
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 25px 50px;
-    opacity: 0;
-    transition: all 0.5s ease-in-out;
+.images{
+    display: flex;
+    width: 100%;
 }
-
-.arrow{
-    border: solid black;
-    border-width: 0 3px 3px 0;
-    display: incline-block;
-    padding: 12px;
+.images img{
+    height: 550px;
+    width: 200%;
+    transition: all 0.10s ease;
 }
-.arrow-prev{
-    left: 30px;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%) rotate(135deg);
+.images input{
+display: none;
 }
-
-.arrow-next{
-    right: 30px;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%) rotate(45deg);
+.dots{
+    display: flex;
+    justify-content: center;
+    margin: 5px;
 }
-[id^="item"]{
-    display: none;
+.dots label{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    border: solid #fff 3px;
+    cursor: pointer;
+    transition: all 0.10s ease;
+    margin: 5px;
 }
-
-.item-1{
-    z-index: 2;
-    opacity: 1;
-    background: url(poze/gallery1.png);
-    background-size: cover;
+.dots label:hover{
+    background:#fff ;
 }
-
-.item-1{
-    z-index: 2;
-    opacity: 1;
-    background: url(poze/gallery2.png);
-  background-size: cover;
+#img1:checked ~ .m1{
+    margin-left: 0;
 }
-.item-1{
-    z-index: 2;
-    opacity: 1;
-    background: url(poze/gallery3.png);
-    background-size: cover;
+#img2:checked ~ .m2{
+    margin-left: -100%;
 }
-*:target ~ .item-1{
-    opacity: 1;
+#img3:checked ~ .m3{
+    margin-left: -200%;
 }
-#item-1:target~ .item-1{
-    opacity: 1;
-}
-#item-2:target ~ .item-2, #item-3:target ~ .item-3{
-    z-index: 3;
-    opacity: 1;
+#img4:checked ~ .m4{
+    margin-left:-300%;
 }
